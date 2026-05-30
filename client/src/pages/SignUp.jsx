@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function SingIn() {
+function SignUp() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <h1 className="text-3xl font-semibold my-7 text-center">Sign Up</h1>
@@ -13,7 +13,13 @@ function SingIn() {
           id="username"
           className="rounded-lg p-3 border w-sm sm:w-xl"
         />
-
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          required
+          className="rounded-lg p-3 border w-sm sm:w-xl"
+        />
         <input
           type="password"
           placeholder="password"
@@ -26,9 +32,9 @@ function SingIn() {
       </form>
       <div className="m-3">
         <p className="text-2xl">
-          Don't have an account?{" "}
-          <Link to="/sign-up" className="text-blue-600">
-            Sign Up
+          Have an account?{" "}
+          <Link to="/sign-in" className="text-blue-600">
+            Sign In
           </Link>
         </p>
       </div>
@@ -36,4 +42,4 @@ function SingIn() {
   );
 }
 
-export default SingIn;
+export default SignUp;
